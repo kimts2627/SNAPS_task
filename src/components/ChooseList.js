@@ -14,9 +14,6 @@ const ChooseList = () => {
           >
             {child.label}
           </button>)}
-        {/* <button className='ChooseList-type-button-point'>기본</button>
-        <button className='ChooseList-type-button'>투명</button>
-        <button className='ChooseList-type-button'>캔버스</button> */}
       </div>
       <div className='ChooseList-option'>
         <h4>{options[1].title}</h4>
