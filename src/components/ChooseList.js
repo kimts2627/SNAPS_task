@@ -1,18 +1,32 @@
 import React from 'react';
+import options from '../options';
 
 const ChooseList = () => {
+
   return (
     <div className='ChooseList'>
       <div className='ChooseList-type'>
-        <h4>타입</h4>
-        <button className='ChooseList-type-button-point'>기본</button>
+        <h4>{options[0].title}</h4>
+        {options[0].child.map(child => 
+          <button
+            className='ChooseList-type-button'
+            key={child.value}
+          >
+            {child.label}
+          </button>)}
+        {/* <button className='ChooseList-type-button-point'>기본</button>
         <button className='ChooseList-type-button'>투명</button>
-        <button className='ChooseList-type-button'>캔버스</button>
+        <button className='ChooseList-type-button'>캔버스</button> */}
       </div>
       <div className='ChooseList-option'>
-        <h4>옵션</h4>
-        <button className='ChooseList-option-button-point'>거치대</button>
-        <button className='ChooseList-option-button'>거치대 없음</button>
+        <h4>{options[1].title}</h4>
+        {options[1].child.map(child => 
+          <button
+            className='ChooseList-option-button'
+            key={child.value}
+          >
+            {child.label}
+          </button>)}
       </div>
       <div className='ChooseList-count'>
         <h4>수량</h4>

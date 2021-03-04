@@ -17,12 +17,13 @@
 
 .ChooseList-type {
   margin-top: 24px;
+  margin-left: 64px;
   width: 100%;
   /* background-color: grey; */
 }
 
 .ChooseList-type h4 {
-  margin-left: 68px;
+  margin-left: 4px;
   font-size: 12px;
 }
 
@@ -52,12 +53,13 @@
 
 .ChooseList-option {
   margin-top: 24px;
+  margin-left: 64px;
   width: 100%;
   /* background-color: grey; */
 }
 
 .ChooseList-option h4 {
-  margin-left: 68px;
+  margin-left: 4px;
   font-size: 12px;
 }
 

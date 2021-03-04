@@ -1,5 +1,3 @@
-import showcase from "./showcase"
-
 let options = [
   {
     "title": "타입",
