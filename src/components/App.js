@@ -1,10 +1,12 @@
-import './App.css';
+import '../style/App.css';
+import Swiper from './Swiper';
+import Options from './Options';
 
-function App() {
+const App = () => {
   return (
     <div className="wrap">
-      <div>Swiper</div>
-      <div>Options</div>
+      <Swiper />
+      <Options />
     </div>
   );
 }

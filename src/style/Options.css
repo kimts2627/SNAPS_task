@@ -1,0 +1,217 @@
+.Options {
+  /* background-color: royalblue; */
+  width: 388px;
+  height: 100%;
+}
+
+.Options h1 {
+  font-size: 22px;
+  margin-left: 68px;
+}
+
+.ChooseList-type {
+  margin-top: 24px;
+  width: 100%;
+  /* background-color: grey; */
+}
+
+.ChooseList-type h4 {
+  margin-left: 68px;
+}
+
+.ChooseList-type-button {
+  margin-top: 8px;
+  margin-left: 4px;
+  width: 104px;
+  height: 40px;
+  border: solid 1px #eeeeee;
+  background-color: white;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+
+.ChooseList-type-button-point {
+  margin-top: 8px;
+  margin-left: 68px;
+  width: 104px;
+  height: 40px;
+  border: solid 1px #eeeeee;
+  background-color: white;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+
+.ChooseList-option {
+  margin-top: 24px;
+  width: 100%;
+  /* background-color: grey; */
+}
+
+.ChooseList-option h4 {
+  margin-left: 68px;
+}
+
+.ChooseList-option-button {
+  margin-top: 8px;
+  margin-left: 4px;
+  width: 104px;
+  height: 40px;
+  border: solid 1px #eeeeee;
+  background-color: white;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+
+.ChooseList-option-button-point {
+  margin-top: 8px;
+  margin-left: 68px;
+  width: 104px;
+  height: 40px;
+  border: solid 1px #eeeeee;
+  background-color: white;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+
+.ChooseList-count {
+  margin-top: 24px;
+  width: 100%;
+  /* background-color: grey; */
+}
+
+.ChooseList-count h4 {
+  margin-left: 68px;
+}
+
+.ChooseList-count div {
+  margin-left: 68px;
+  margin-top: 8px;
+  width: 158px;
+  height: 40px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: solid 1px #eeeeee;
+}
+
+.ChooseList-count div aside{
+  width: 24px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChooseList-count div p {
+  font-size: 12px;
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChooseResult {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.line1 {
+  margin-top: 24px;
+  margin-left: 68px;
+  background-color: #eeeeee;
+  width: 320px;
+  height: 1px;
+}
+
+.line2 {
+  margin-top: 16px;
+  margin-left: 68px;
+  background-color: #eeeeee;
+  width: 320px;
+  height: 1px;
+}
+
+.ChooseResult-list-container {
+  margin-top: 16px;
+  /* background-color: grey; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 38px;
+}
+
+.ChooseResult-list-container div {
+  margin-left: 68px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ChooseResult-list-price {
+  display: flex;
+  align-items: flex-end;
+}
+
+.ChooseResult-price-container {
+  margin-top: 21px;
+  margin-bottom: 20px;
+  /* background-color: grey; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ChooseResult-price-container-desc1 {
+  margin-left: 68px;
+}
+
+.Make {
+  margin-left: 68px;
+  width: 320px;
+  height: 50px;
+  background-color: #191919;
+  font-size: 13px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.OptionsFooter {
+  margin-top: 24px;
+}
+
+.bullet {
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  background-color: #191919;
+  margin-right: 4px;
+}
+
+.footerWrap {
+  font-size: 12px;
+  margin-left: 68px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 29px;
+}
+
+.footerContainer p {
+  width: 45px;
+}

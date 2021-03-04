@@ -28,7 +28,6 @@ body {
   line-height: 1;
   box-sizing: border-box;
 	font-family: 'Quicksand', sans-serif;
-	overflow: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -48,7 +47,25 @@ table {
 
 /*-----------------------code for reset CSS---------------------------*/
 
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .wrap {
   width: 1140px;
-  margin: 0 auto;
+  /* height: 1009px; */
+	display: flex;
+	flex-direction: row;
+  justify-content: center;
+	align-items: flex-start;
+	font-family: 'Roboto';
+	color: #191919;
 }
+
+@import './Options.css';
+@import './Swiper.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
