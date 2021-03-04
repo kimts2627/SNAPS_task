@@ -39,12 +39,12 @@
   cursor: pointer;
 }
 
-.ChooseList-type-button-point {
+.ChooseList-type-button-selected {
   margin-top: 8px;
-  margin-left: 68px;
+  margin-left: 4px;
   width: 104px;
   height: 40px;
-  border: solid 1px #eeeeee;
+  border: solid 1px #191919;
   background-color: white;
   font-size: 12px;
   outline: none;
@@ -76,12 +76,12 @@
   text-align: center;
 }
 
-.ChooseList-option-button-point {
+.ChooseList-option-button-selected {
   margin-top: 8px;
-  margin-left: 68px;
+  margin-left: 4px;
   width: 158px;
   height: 40px;
-  border: solid 1px #eeeeee;
+  border: solid 1px #191919;
   background-color: white;
   font-size: 12px;
   outline: none;

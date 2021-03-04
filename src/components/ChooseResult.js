@@ -1,14 +1,21 @@
 import React from 'react';
 
-const ChooseResult = () => {
+const ChooseResult = ({ selectedOptions }) => {
+
+  const MakeResult = () => {
+    const { type, option, number } = selectedOptions;
+    console.log(`선택된 옵션 목록은 ${type} / ${option} / ${number}개 입니다!`);
+    alert('주문서가 콘솔창에 출력 되었습니다!');
+  }
+
   return (
     <div className='ChooseResult'>
       <section className='ChooseResult-list'>
         <div className='line1' />
         <div className='ChooseResult-list-container'>
           <div>
-            <p>기본 / 거치대</p>
-            <p>수량:1</p>
+            <p>{`${selectedOptions.type} / ${selectedOptions.option}`}</p>
+            <p>{`수량: ${selectedOptions.number}`}</p>
           </div>
           <p className='ChooseResult-list-price'>5000원</p>
         </div>
@@ -20,7 +27,7 @@ const ChooseResult = () => {
           <p className='ChooseResult-price-container-desc2'>5000원</p>
         </div>
       </section>
-      <button className='Make'>만들기</button>
+      <button className='Make' onClick={MakeResult}>만들기</button>
     </div>
   );
 }

@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ChooseList from './ChooseList';
 import ChooseResult from './ChooseResult';
 
-const Options = () => {
+const Options = ({ selectedOptions, changeOptions }) => {
+
   return (
     <section className='Options'>
       <h1>옵션 선택</h1>
-      <ChooseList />
-      <ChooseResult />
+      <ChooseList changeOptions={changeOptions} selectedOptions={selectedOptions}/>
+      <ChooseResult selectedOptions={selectedOptions}/>
       <OptionsFooter />
     </section>
   );

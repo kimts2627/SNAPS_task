@@ -12,15 +12,15 @@ export const changeOptions = (options) => ({
 // 스테이트 초기값
 const initialState = {
   selectedOptions: {
-    type: null,
-    option: null,
+    type: '기본',
+    option: '거치대',
     number: 1
   }
 }
 
 // 리듀서
 const options = (state = initialState, action) => {
-  switch(action) {
+  switch(action.type) {
     case CHANGE_OPTIONS:
       return Object.assign({}, state, { selectedOptions: action.payload.options });
     default:

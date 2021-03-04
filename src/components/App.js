@@ -1,12 +1,12 @@
 import '../style/App.css';
-import Swiper from './Swiper';
-import Options from './Options';
+import SwiperContainer from '../containers/SwiperContainer';
+import OptionsContainer from '../containers/OptionsContainer';
 
 const App = () => {
   return (
     <div className="wrap">
-      <Swiper />
-      <Options />
+      <SwiperContainer />
+      <OptionsContainer />
     </div>
   );
 }

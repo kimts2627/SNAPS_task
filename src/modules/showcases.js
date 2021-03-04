@@ -1,5 +1,3 @@
-import showcase from '../showcase';
-
 // 액션
 const CHANGE_PIC = 'showcases/CHANGE_PIC';
 
@@ -13,12 +11,12 @@ export const changePic = (pic) => ({
 
 // 스테이트 초기값
 const initialState = {
-  currentPic: showcase[0]
+  currentPic: 0
 }
 
 // 리듀서
 const showcases = (state = initialState, action) => {
-  switch(action) {
+  switch(action.type) {
     case CHANGE_PIC:
       return Object.assign({}, state, { currentPic: action.payload.pic });
     default:
