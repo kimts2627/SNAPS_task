@@ -1,19 +1,15 @@
 import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import Thumbnail from './Thumbnail.js';
-import thumbnail1 from '../img/thumb-minibanner-01.png';
-import thumbnail2 from '../img/thumb-minibanner-02.png';
-import thumbnail3 from '../img/thumb-minibanner-03.png';
-import thumbnail4 from '../img/thumb-minibanner-04.png';
-import thumbnail5 from '../img/thumb-minibanner-05.png';
 import arrow from '../img/btn-prev-4040.png';
+import showcase from '../showcase.js';
 
 const Swiper = () => {
 
   let settings = {
     dots: false,
     infinite: false,
-    arrows: true,
+    arrows: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1
@@ -23,21 +19,7 @@ const Swiper = () => {
     <section className='Swiper'>
       <img src={arrow} alt='' className='arrow' />
       <Slider {...settings} className='MainSlider'>
-        <div>
-          <img src={thumbnail1} alt='' />
-        </div>
-        <div>
-          <img src={thumbnail2} alt='' />
-        </div>
-        <div>
-          <img src={thumbnail3} alt='' />
-        </div>
-        <div>
-          <img src={thumbnail4} alt='' />
-        </div>
-        <div>
-          <img src={thumbnail5} alt='' />
-        </div>
+        {showcase.map(pic => <SingleThumb key={pic.imagePath} src={`https://files.snaps.com${pic.imagePath}`}/>)}
       </Slider>
       <img src={arrow} alt='' className='arrow r' />
       <Thumbnail />
