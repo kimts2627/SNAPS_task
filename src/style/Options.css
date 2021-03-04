@@ -2,11 +2,17 @@
   /* background-color: royalblue; */
   width: 388px;
   height: 100%;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
 }
 
 .Options h1 {
   font-size: 22px;
   margin-left: 68px;
+  font-weight: 500;
 }
 
 .ChooseList-type {
@@ -17,6 +23,7 @@
 
 .ChooseList-type h4 {
   margin-left: 68px;
+  font-size: 12px;
 }
 
 .ChooseList-type-button {
@@ -51,36 +58,39 @@
 
 .ChooseList-option h4 {
   margin-left: 68px;
+  font-size: 12px;
 }
 
 .ChooseList-option-button {
   margin-top: 8px;
   margin-left: 4px;
-  width: 104px;
+  width: 158px;
   height: 40px;
   border: solid 1px #eeeeee;
   background-color: white;
   font-size: 12px;
   outline: none;
   cursor: pointer;
+  text-align: center;
 }
 
 .ChooseList-option-button-point {
   margin-top: 8px;
   margin-left: 68px;
-  width: 104px;
+  width: 158px;
   height: 40px;
   border: solid 1px #eeeeee;
   background-color: white;
   font-size: 12px;
   outline: none;
   cursor: pointer;
+  text-align: center;
 }
 
 .ChooseList-count {
   margin-top: 24px;
   width: 100%;
-  /* background-color: grey; */
+  font-size: 12px;
 }
 
 .ChooseList-count h4 {
@@ -99,12 +109,24 @@
   border: solid 1px #eeeeee;
 }
 
-.ChooseList-count div aside{
+.asideLeft {
   width: 24px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.asideRight {
+  width: 24px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 12px;
 }
 
 .ChooseList-count div p {
@@ -143,6 +165,8 @@
   flex-direction: row;
   justify-content: space-between;
   height: 38px;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .ChooseResult-list-container div {
@@ -150,6 +174,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-weight: normal;
 }
 
 .ChooseResult-list-price {
@@ -214,4 +239,19 @@
 
 .footerContainer p {
   width: 45px;
+}
+
+.ChooseResult-price-container-desc1 {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ChooseResult-price-container-desc2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e5362c;
+}
+
+.greyFont {
+  color: #666666;
 }

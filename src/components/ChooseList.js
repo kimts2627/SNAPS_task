@@ -17,9 +17,9 @@ const ChooseList = () => {
       <div className='ChooseList-count'>
         <h4>수량</h4>
         <div>
-          <aside>-</aside>
+          <aside className='asideLeft'>-</aside>
           <p>1</p>
-          <aside>+</aside>
+          <aside className='asideRight'>+</aside>
         </div>
       </div>
     </div>
