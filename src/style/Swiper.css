@@ -90,3 +90,7 @@
 .r {
   transform: rotate(180deg);
 }
+
+.slick-track {
+  transition: all 0.5s;
+}
