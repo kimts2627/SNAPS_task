@@ -69,3 +69,5 @@ table {
 @import './Options.css';
 @import './Swiper.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
