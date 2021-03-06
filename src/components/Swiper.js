@@ -18,7 +18,8 @@ const Swiper = ({ currentPic, changePic }) => {
     arrows: false,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    afterChange: (i) => changePic(i)
   }
 
   const changePicBtn = (e) => {
