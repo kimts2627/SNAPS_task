@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import options from '../options';
 
-const ChooseList = ({ selectedOptions, changeOptions, isNumberEditMode, changeEditMode }) => {
+const ChooseList = ({ selectedOptions, changeOptions }) => {
 
   const inputRef = useRef();
 

@@ -35,9 +35,9 @@ const Thumbnail = ({ currentPic, changePic }) => {
         <div className='thumbnails'>
           {showcase.map(pic =>
             <SingleSmallThumb
-              key={pic.thumbnailImagePath}
               src={`https://files.snaps.com${pic.thumbnailImagePath}`}
               changePic={changePic}
+              key={pic.thumbnailImagePath.slice(37)}
             />
           )}
         </div>
@@ -47,7 +47,7 @@ const Thumbnail = ({ currentPic, changePic }) => {
   );
 }
 
-const SingleSmallThumb = ({ src, key, changePic }) => {
+const SingleSmallThumb = ({ src, changePic }) => {
 
   const handleThumbnailClick = () => {
     for(let i = 0; i < showcase.length; i ++) {

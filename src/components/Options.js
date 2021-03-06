@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ChooseList from './ChooseList';
 import ChooseResult from './ChooseResult';
 
@@ -10,8 +10,6 @@ const Options = ({ selectedOptions, changeOptions, isNumberEditMode, changeEditM
       <ChooseList
         changeOptions={changeOptions}
         selectedOptions={selectedOptions}
-        isNumberEditMode={isNumberEditMode}
-        changeEditMode={changeEditMode}
       />
       <ChooseResult selectedOptions={selectedOptions}/>
       <OptionsFooter />
