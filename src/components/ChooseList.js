@@ -9,27 +9,27 @@ const ChooseList = ({ selectedOptions, changeOptions, isNumberEditMode, changeEd
     // input 태그 value를 state에 핸들링
     let value = e.target.value;
     if(!value) {
-      value = 1;
+      changeOptions(Object.assign({}, selectedOptions, { number: 1 }));
+    }
+    else if(typeof Number(e.target.value) !== 'number') {
+      changeOptions(Object.assign({}, selectedOptions, { number: 1 }));
+      return alert('숫자만 입력할 수 있습니다.');
     }
     if(value < 1) {
+      changeOptions(Object.assign({}, selectedOptions, { number: 1 }));
       return alert('수량은 1개 미만, 999개 초과일 수 없습니다.');
     }
     else if(value > 999) {
+      changeOptions(Object.assign({}, selectedOptions, { number: 999 }));
       return alert('수량은 1개 미만, 999개 초과일 수 없습니다.');
     }
-    changeOptions(Object.assign({}, selectedOptions, { number: e.target.value }))
+    changeOptions(Object.assign({}, selectedOptions, { number: value }));
   } 
 
   useEffect(() => {
     // input 태그와 수량 상태를 동기화
     if(selectedOptions.number !== inputRef.current.value) {
       inputRef.current.value = selectedOptions.number;
-    }
-    if(selectedOptions.number < 1) {
-      changeOptions(Object.assign({}, selectedOptions, { number: 1 }));
-    }
-    else if(selectedOptions.number > 999) {
-      changeOptions(Object.assign({}, selectedOptions, { number: 999 }));
     }
   }, [selectedOptions]);
 
@@ -63,12 +63,18 @@ const ChooseList = ({ selectedOptions, changeOptions, isNumberEditMode, changeEd
       document.querySelector('.ChooseList-option-button-selected').classList = 'ChooseList-option-button';
     }
     // 수량 - 핸들링
-    else if(e.target.textContent === '-' && selectedOptions.number > 1) {
+    else if(e.target.textContent === '-') {
+      if(selectedOptions.number <= 1) {
+        return alert('수량은 1개 미만, 999개 초과일 수 없습니다.');
+      }
       let newOptions = Object.assign({}, selectedOptions, { number: selectedOptions.number - 1 });
       changeOptions(newOptions);
     }
     // 수량 + 핸들링
-    else if(e.target.textContent === '+' && selectedOptions.number < 999) {
+    else if(e.target.textContent === '+') {
+      if(selectedOptions.number >= 999) {
+        return alert('수량은 1개 미만, 999개 초과일 수 없습니다.');
+      }
       let newOptions = Object.assign({}, selectedOptions, { number: selectedOptions.number + 1 });
       changeOptions(newOptions);
     }
