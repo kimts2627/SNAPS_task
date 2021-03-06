@@ -2,12 +2,17 @@ import React, { useEffect } from 'react';
 import ChooseList from './ChooseList';
 import ChooseResult from './ChooseResult';
 
-const Options = ({ selectedOptions, changeOptions }) => {
+const Options = ({ selectedOptions, changeOptions, isNumberEditMode, changeEditMode }) => {
 
   return (
     <section className='Options'>
       <h1>옵션 선택</h1>
-      <ChooseList changeOptions={changeOptions} selectedOptions={selectedOptions}/>
+      <ChooseList
+        changeOptions={changeOptions}
+        selectedOptions={selectedOptions}
+        isNumberEditMode={isNumberEditMode}
+        changeEditMode={changeEditMode}
+      />
       <ChooseResult selectedOptions={selectedOptions}/>
       <OptionsFooter />
     </section>

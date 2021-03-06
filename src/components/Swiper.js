@@ -10,11 +10,7 @@ const Swiper = ({ currentPic, changePic }) => {
     // currentPic 상태에 맞춰서 트랙도 이동
     let track = document.querySelector('.slick-track');
     track.style.transform = `translate3d(${-752 * currentPic}px, 0px, 0px)`;
-    // 트랙 위치에 맞춰서 currentPic 상태도 동기화 //! 스택오버플로 주의
-    // ...
-    // ...
-    // ...
-  }, [currentPic]);
+  });
 
   let settings = {
     dots: false,

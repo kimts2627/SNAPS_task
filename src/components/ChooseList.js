@@ -1,7 +1,37 @@
 import React, { useEffect, useRef } from 'react';
 import options from '../options';
 
-const ChooseList = ({ selectedOptions, changeOptions }) => {
+const ChooseList = ({ selectedOptions, changeOptions, isNumberEditMode, changeEditMode }) => {
+
+  const inputRef = useRef();
+
+  const handleChange = (e) => {
+    // input 태그 value를 state에 핸들링
+    let value = e.target.value;
+    if(!value) {
+      value = 1;
+    }
+    if(value < 1) {
+      return alert('수량은 1개 미만, 999개 초과일 수 없습니다.');
+    }
+    else if(value > 999) {
+      return alert('수량은 1개 미만, 999개 초과일 수 없습니다.');
+    }
+    changeOptions(Object.assign({}, selectedOptions, { number: e.target.value }))
+  } 
+
+  useEffect(() => {
+    // input 태그와 수량 상태를 동기화
+    if(selectedOptions.number !== inputRef.current.value) {
+      inputRef.current.value = selectedOptions.number;
+    }
+    if(selectedOptions.number < 1) {
+      changeOptions(Object.assign({}, selectedOptions, { number: 1 }));
+    }
+    else if(selectedOptions.number > 999) {
+      changeOptions(Object.assign({}, selectedOptions, { number: 999 }));
+    }
+  }, [selectedOptions]);
 
   useEffect(() => {
     // 선택된 옵션에 따라 강조스타일 부여하기
@@ -72,7 +102,7 @@ const ChooseList = ({ selectedOptions, changeOptions }) => {
         <h4>수량</h4>
         <div>
           <aside className='asideLeft' onClick={(e) => changeOptionBtn(e)}>-</aside>
-          <input type='text' value={selectedOptions.number} />
+          <input type='text' ref={inputRef} onChange={(e) => handleChange(e)}/>
           <aside className='asideRight' onClick={(e) => changeOptionBtn(e)}>+</aside>
         </div>
       </div>
