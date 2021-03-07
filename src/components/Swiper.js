@@ -19,7 +19,7 @@ const Swiper = ({ currentPic, changePic }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    afterChange: (i) => changePic(i)
+    afterChange: (i) => changePic(i) // ...... 슬라이드 변경 후, 해당 인덱스로 state 변경
   }
 
   const changePicBtn = (e) => {
