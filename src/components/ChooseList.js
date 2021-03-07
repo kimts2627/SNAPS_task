@@ -11,7 +11,7 @@ const ChooseList = ({ selectedOptions, changeOptions }) => {
     if(!value) {
       changeOptions(Object.assign({}, selectedOptions, { number: 1 }));
     }
-    else if(typeof Number(e.target.value) !== 'number') {
+    else if(isNaN(Number(value))) {
       changeOptions(Object.assign({}, selectedOptions, { number: 1 }));
       return alert('숫자만 입력할 수 있습니다.');
     }
